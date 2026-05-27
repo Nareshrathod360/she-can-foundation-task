@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>She Can Foundation</title>
+  <link rel="stylesheet" href="style.css" />
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- BACKGROUND BLOBS -->
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+  <div class="bg-blob blob-3"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="https://shecanfoundation.org" target="_blank">
+        <div class="logo-circle"><img src="logo.avif" alt="She Can Foundation Logo" /></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="https://shecanfoundation.org/our-story" target="_blank">Our Story</a></li>
+        <li><a href="https://shecanfoundation.org/our-certificate" target="_blank">Certificates</a></li>
+        <li><a href="https://shecanfoundation.org/donate" target="_blank" class="btn-donate">Donate Now</a></li>
+      </ul>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="https://shecanfoundation.org/our-story" target="_blank">Our Story</a>
+      <a href="https://shecanfoundation.org/our-certificate" target="_blank">Certificates</a>
+      <a href="https://shecanfoundation.org/donate" target="_blank">Donate Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">Together We Can Change The World</div>
+    <h1 class="hero-title">Reach Out &amp;<br><em>Make a Difference</em></h1>
+    <p class="hero-subtitle">Whether you want to volunteer, donate, partner, or simply learn more — we'd love to hear from you. Every message sparks change.</p>
+  </section>
+
+  <!-- MAIN GRID -->
+  <main class="main-grid">
+
+    <!-- LEFT: INFO SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="info-card stats-card">
+        <h3 class="card-title">Our Impact</h3>
+        <div class="stats-grid">
+          <div class="stat rose">
+            <span class="stat-num">500+</span>
+            <span class="stat-lbl">Women Empowered</span>
+          </div>
+          <div class="stat gold">
+            <span class="stat-num">12+</span>
+            <span class="stat-lbl">Communities</span>
+          </div>
+          <div class="stat gold">
+            <span class="stat-num">3+</span>
+            <span class="stat-lbl">Years Active</span>
+          </div>
+          <div class="stat rose">
+            <span class="stat-num">∞</span>
+            <span class="stat-lbl">Lives Touched</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card contact-card">
+        <h3 class="card-title">Direct Contact</h3>
+        <div class="contact-row">
+          <div class="ci">✉</div>
+          <span>president@shecanfoundation.org</span>
+        </div>
+        <div class="contact-row">
+          <div class="ci">📞</div>
+          <span>+91 82838 41830</span>
+        </div>
+        <div class="contact-row">
+          <div class="ci">📸</div>
+          <span><a href="https://www.instagram.com/_shecanfoundation_" targer="_blank">Instagram</a></span>
+        </div>
+        <div class="contact-row">
+          <div class="ci">💼</div>
+          <span><a href="https://www.linkedin.com/company/shecanfoundation" target="_blank" >LinkedIn</a></span>
+        </div>
+      </div>
+
+      <blockquote class="quote-card">
+        "Together, we can break down barriers and empower women. If we all do our part, there is no challenge too great to overcome."
+        <cite>— Reeta Mishra, Founder &amp; President</cite>
+      </blockquote>
+
+    </aside>
+
+    <!-- RIGHT: FORM -->
+    <section class="form-section">
+      <div class="form-card">
+        <div class="form-top-bar"></div>
+
+        <div class="form-header">
+          <h2>Get in Touch</h2>
+          <p>Fill in the details below and we'll connect with you within 2–3 business days.</p>
+        </div>
+
+        <form id="contactForm" novalidate>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="fname">First Name <span class="req">*</span></label>
+              <input type="text" id="fname" name="fname" placeholder="Krishna" autocomplete="given-name"/>
+              <span class="err" id="fname-err">Please enter your first name.</span>
+            </div>
+            <div class="field">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Rathod" autocomplete="family-name"/>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="krishna@example.com" autocomplete="email"/>
+            <span class="err" id="email-err">Please enter a valid email address.</span>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel"/>
+          </div>
+
+          <div class="field">
+            <label>I'm Interested In</label>
+            <div class="pill-group">
+              <span class="pill" onclick="togglePill(this)">Volunteering</span>
+              <span class="pill" onclick="togglePill(this)">Donation</span>
+              <span class="pill" onclick="togglePill(this)">Internship</span>
+              <span class="pill" onclick="togglePill(this)">Partnership</span>
+              <span class="pill" onclick="togglePill(this)">Awareness</span>
+              <span class="pill" onclick="togglePill(this)">General Inquiry</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Your Message <span class="req">*</span></label>
+            <textarea id="message" name="message" placeholder="Tell us how you'd like to contribute or what you'd like to know..."></textarea>
+            <span class="err" id="msg-err">Please write a short message (at least 10 characters).</span>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitBtn">
+            <span class="btn-text">Send Message →</span>
+            <span class="btn-spinner" id="spinner"></span>
+          </button>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2024 She Can Foundation &nbsp;·&nbsp; NGO Registered under Indian Society Act, 1860</p>
+    <p><a href="https://shecanfoundation.org" target="_blank">shecanfoundation.org</a> &nbsp;·&nbsp; Empowering Women Across India</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

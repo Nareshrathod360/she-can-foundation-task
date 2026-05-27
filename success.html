@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>She Can Foundation — Message Sent!</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body class="success-page">
+
+  <!-- BACKGROUND BLOBS -->
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+  <div class="bg-blob blob-3"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="https://shecanfoundation.org" target="_blank">
+        <div class="logo-circle"><img src="logo.avif" alt="She Can Foundation Logo" /></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="https://shecanfoundation.org/our-story" target="_blank">Our Story</a></li>
+        <li><a href="https://shecanfoundation.org/our-certificate" target="_blank">Certificates</a></li>
+        <li><a href="https://shecanfoundation.org/donate" target="_blank" class="btn-donate">Donate Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SUCCESS CONTENT -->
+  <div class="success-wrapper">
+
+    <!-- Confetti circles (CSS animated) -->
+    <div class="confetti-field" aria-hidden="true">
+      <span class="cf cf1"></span>
+      <span class="cf cf2"></span>
+      <span class="cf cf3"></span>
+      <span class="cf cf4"></span>
+      <span class="cf cf5"></span>
+      <span class="cf cf6"></span>
+      <span class="cf cf7"></span>
+      <span class="cf cf8"></span>
+    </div>
+
+    <div class="success-card">
+      <div class="success-icon-wrap">
+        <div class="success-ring ring1"></div>
+        <div class="success-ring ring2"></div>
+        <div class="success-icon">✓</div>
+      </div>
+
+      <div class="success-badge">Form Submitted Successfully</div>
+
+      <h1 class="success-title">Thank You for<br><em>Reaching Out!</em></h1>
+
+      <p class="success-body">
+        We've received your message and truly appreciate you connecting with She Can Foundation.
+        Our team will get back to you within <strong>2–3 business days</strong>.
+      </p>
+
+      <div class="success-details" id="successDetails">
+        <!-- Populated by JS from sessionStorage -->
+      </div>
+
+      <div class="success-divider">
+        <span>What happens next?</span>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-text">We review your message carefully</div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-text">Our team assigns the right person</div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-text">We reach out to you within 2–3 days</div>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <a href="index.html" class="btn-primary">Send Another Message</a>
+        <a href="https://shecanfoundation.org/donate" target="_blank" class="btn-secondary">Support Our Cause ♀</a>
+      </div>
+    </div>
+
+    <p class="success-footer-note">
+      Questions? Email us at
+      <a href="mailto:president@shecanfoundation.org">president@shecanfoundation.org</a>
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2024 She Can Foundation &nbsp;·&nbsp; NGO Registered under Indian Society Act, 1860</p>
+    <p><a href="https://shecanfoundation.org" target="_blank">shecanfoundation.org</a> &nbsp;·&nbsp; Empowering Women Across India</p>
+  </footer>
+
+  <script>
+    // Read submitted name & email from sessionStorage and display
+    const name  = sessionStorage.getItem('scf_name');
+    const email = sessionStorage.getItem('scf_email');
+    const box   = document.getElementById('successDetails');
+
+    if (name || email) {
+      box.innerHTML = `
+        <div class="detail-row">
+          ${name  ? `<div class="detail-chip">👤 ${name}</div>`  : ''}
+          ${email ? `<div class="detail-chip">✉ ${email}</div>` : ''}
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
